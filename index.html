@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title>Kerry's Kiss B&B | Home</title>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width'>
+    <link rel='stylesheet' href='masterstyles.css' type='text/css'>
+    <script src="scripts.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#000000">
+  </head>
+
+  <body>
+    <header>
+      <a href="index.html"><img src="images/logo.png" alt="Kerry's Kiss Logo"></a>
+      <a href="index.html"><h1>Kerry's Kiss B&B</h1></a>
+      <label for="hamb"><img src="images/hamburger.png" alt="Hamburger Menu"></label>
+      <input type="checkbox" id="hamb">
+      <div class="hamburger">
+        <a href="index.html">Home</a>
+        <a onclick="CheckFormBox()">Book A Stay</a>
+        <a href="location.html">Killarney</a>
+        <a href="about.html">About</a>
+      </div>
+    </header>
+    <main onclick="Uncheck()">
+      <div class="top">
+        <label id="form-unchecked" for="form"><span id="click">Click Here To</span><br>BOOK A STAY</label>
+        <label id="form-checked" for="form">X</label>
+        <input type="checkbox" id="form" onclick="ChangeCheckboxLabel(this)">
+        <form class="bookForm" method="post" action= "mailto:james.smith@students.ittralee.ie" enctype="text/plain">
+          <h2>BOOK A STAY</h2>
+          <h3>Select Your Dates</h3>
+          <div id="dates">
+            <div id="arrival">
+              <label for="arrivalDate" class="dateLabel">Arrival</label>
+              <input type="date" id="arrivalDate" name="Arrival Date">
+            </div>
+            <div id="departure">
+              <label for="departureDate" class="dateLabel">Departure</label>
+              <input type="date" id="departureDate" name="Departure Date">
+            </div>
+          </div>
+          <div class="persInfo">
+            <h3>Guest Details</h3>
+            <div class="names">
+              <div id="fName">
+                <label for="foreName">Forename</label>
+                <input type="text" id="foreName" name="Forename">
+              </div>
+              <div id="sName">
+                <label for="surName">Surname</label>
+                <input type="text" id="surName" name="Surname">
+              </div>
+            </div>
+            <div class="guestRoom">
+              <div class="guests">
+                <label for="noG">Number of Guests</label>
+                <select name="No. Guests" id="noG">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+              </div>
+              <div class="rooms">
+                <label for="room">Room Type</label>
+                <select name="Room Type" id="room">
+                  <option value="double">Double</option>
+                  <option value="twin">Twin</option>
+                  <option value="king">King</option>
+                  <option value="queen">Queen</option>
+                </select>
+              </div>
+            </div>
+            <div class="mailNo">
+              <div class="phoneNo">
+                <label for="mobile">Phone Number</label>
+                <input type="text" id="mobile" name="Phone">
+              </div>
+              <div class="eMail">
+                <label for="mail">Email</label>
+                <input type="text" id="mail" name="Email">
+              </div>
+            </div>
+          </div>
+          <p>Payments Accepted:<br><span class="indent">- Visa</span><br><span class="indent">- Mastercard</span><br><span class="indent">- Paypal</span></p>
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+      <div id="afterForm">
+        <div class="roomImg">      
+          <div>
+            <img src="images/double.jpg" alt="double bedroom">
+            <p>Double Room</p>
+            <div onclick="CheckFormBox('double')">
+              <p>Book Now</p>
+            </div>
+          </div>
+          <div>
+            <img src="images/twin.jpg" alt="twin bedroom">
+            <p>Twin Room</p>
+            <div onclick="CheckFormBox('twin')">
+              <p>Book Now</p>
+            </div>
+          </div>
+          <div>
+            <img src="images/queen.jpg" alt="queen bedroom">
+            <p>Queen Room</p>
+            <div onclick="CheckFormBox('queen')">
+              <p>Book Now</p>
+            </div>
+          </div>
+          <div>
+            <img src="images/king.jpg" alt="king bedroom">
+            <p>King Room</p>
+            <div onclick="CheckFormBox('king')">
+              <p>Book Now</p>
+            </div>
+          </div>
+        </div>
+        <div id="homeInfo">
+          <div class="bnbIreland">
+            <img src="images/B&BIreland.jpg" alt="B&B Ireland Logo">
+            <p>
+              When you choose to book with Kerry's Kiss B&B you are choosing a B&B that has been approved by the Irish Tourism Standards Board and B&B Ireland's Quality Framework. This is an assurance of quality and service.
+            </p>
+          </div>
+          <div class="blueBook">
+            <img src="images/IrelandBlueBook.jpg" alt="Ireland Blue Book Logo">
+            <p>
+              As a proud member of Ireland’s Blue Book we are delighted to accept Blue Book Vouchers at Kerry's Kiss B&B. So much so, that when you spend your Blue Book vouchers with us, we will treat you to tea and scones on arrival and a late check-out time on departure, with our compliments. Offer valid for stays before 31th May 2023.
+            </p>
+          </div>
+        </div>
+        <div id="revFAQ">
+          <div id="customerReviews">
+            <h3>Customer Reviews</h3>
+            <div class="comment">
+              <img src="images/profile.jpg" alt="profile pic">
+              <p>
+                We had a delightful stay last weekend. The B&B exceeded our expectations in a small town. The B&B is lovely and well appointed, yet comfortable. Our room was spacious and the bed was perfect. It was a memorable weekend.
+              </p>
+            </div>
+            <div class="comment">
+              <img src="images/profile.jpg" alt="profile pic">
+              <p>
+                This was my third visit. We come every year to get away from the hectic life. This is the best way to relax, unwind, enjoy great company and food. We plan to keep coming every year.
+              </p>
+            </div>
+            <div id="comm">
+              <p>Comment</p>
+            </div>
+          </div>
+          <div id="faq">
+            <h3>FAQ</h3>
+            <div class="ques">
+              <h4>Guide Dogs and Pets?</h4>
+              <p>Guide Dogs are definetly allowed! All pets are allowed, although bigger animals must be kept on a leash or in a cage.</p>
+            </div>
+            <div class="ques">
+              <h4>What are the restrictions on smoking?</h4>
+              <p>Smoking is allowed in the communal outdoor smoking area. Smoking indoors is not permitted!</p>
+            </div>
+            <div class="ques">
+              <h4>What currencies are used in Ireland</h4>
+              <p>The Euro(€) is used in Ireland, depending on your bank, your credit card may convert your currency to the Euro, charges may apply</p>
+            </div>
+          </div>
+        </div>
+        <div class="twitter">
+          <a class="twitter-timeline" data-height="650" data-theme="dark" href="https://twitter.com/rtenews?ref_src=twsrc%5Etfw">Tweets by rtenews</a> <script async src="https://platform.twitter.com/widgets.js"></script>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
